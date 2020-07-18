@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,91 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="final_grade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Current Grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T5b-x5-PSK">
+                                <rect key="frame" x="20" y="105" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="hB2-JH-VvR"/>
+                                    <constraint firstAttribute="height" constant="34" id="ycl-hr-2bl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Desired Grade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="167-Ba-nfU">
+                                <rect key="frame" x="20" y="164" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="g0m-Ot-DWM"/>
+                                    <constraint firstAttribute="width" constant="374" id="oMs-hT-Uct"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Final Exam % Worth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdD-UE-3LL">
+                                <rect key="frame" x="20" y="221" width="374" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="0Xx-dM-Hgy"/>
+                                    <constraint firstAttribute="height" constant="34" id="i9Z-4o-07o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hn-wa-b84">
+                                <rect key="frame" x="79" y="628" width="271" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="gcF-gh-MVL"/>
+                                    <constraint firstAttribute="width" constant="271" id="wxf-eO-2cu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="What grade do i need?"/>
+                                <connections>
+                                    <action selector="gradeNeededBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YKo-RU-Qkk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's See" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zY1-Ka-WZ0">
+                                <rect key="frame" x="152" y="746" width="111" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="PzW-3s-tUK"/>
+                                    <constraint firstAttribute="width" constant="111" id="YZg-cI-2Zi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zY1-Ka-WZ0" firstAttribute="top" secondItem="7Hn-wa-b84" secondAttribute="bottom" constant="72" id="4cQ-Mj-BVQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zY1-Ka-WZ0" secondAttribute="trailing" constant="151" id="A1F-Sv-6ae"/>
+                            <constraint firstItem="T5b-x5-PSK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Jgu-VI-Z9c"/>
+                            <constraint firstItem="7Hn-wa-b84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="ONt-jR-F2x"/>
+                            <constraint firstItem="T5b-x5-PSK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="P5P-JM-jOE"/>
+                            <constraint firstItem="167-Ba-nfU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QE3-Ip-rJo"/>
+                            <constraint firstItem="zY1-Ka-WZ0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="WKZ-fp-zns"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T5b-x5-PSK" secondAttribute="trailing" constant="20" id="b3q-P4-8Vj"/>
+                            <constraint firstItem="7Hn-wa-b84" firstAttribute="top" secondItem="kdD-UE-3LL" secondAttribute="bottom" constant="373" id="jEb-aT-Fkg"/>
+                            <constraint firstItem="kdD-UE-3LL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nVp-rS-bHz"/>
+                            <constraint firstItem="167-Ba-nfU" firstAttribute="top" secondItem="T5b-x5-PSK" secondAttribute="bottom" constant="25" id="oWx-lO-eLe"/>
+                            <constraint firstItem="kdD-UE-3LL" firstAttribute="top" secondItem="167-Ba-nfU" secondAttribute="bottom" constant="23" id="rdv-Jh-cTK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="167-Ba-nfU" secondAttribute="trailing" constant="20" id="txa-gK-U4N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Hn-wa-b84" secondAttribute="trailing" constant="64" id="upf-SD-PSO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kdD-UE-3LL" secondAttribute="trailing" constant="20" id="yJ6-KT-PHZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="currentGradeTextFeild" destination="T5b-x5-PSK" id="F4y-8Q-DtX"/>
+                        <outlet property="desireGradeTextFeild" destination="167-Ba-nfU" id="CGf-ce-0R1"/>
+                        <outlet property="finalWorthTextFeild" destination="kdD-UE-3LL" id="NVg-hz-eZn"/>
+                        <outlet property="gradeNeededLabel" destination="zY1-Ka-WZ0" id="1j6-C2-mgK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>
